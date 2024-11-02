@@ -23,7 +23,7 @@ export default function Card({ type, isBack = false, onClick }) {
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={`w-48 h-64 rounded-xl shadow-lg flex items-center justify-center cursor-pointer
-        ${isBack ? "bg-indigo-600" : "bg-white"}`}
+        ${isBack ? "bg-black" : "bg-white"}`}
       onClick={onClick}
     >
       {isBack ? (

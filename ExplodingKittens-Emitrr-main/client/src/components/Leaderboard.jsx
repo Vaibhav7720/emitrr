@@ -26,10 +26,6 @@ export default function Leaderboard() {
     loadLeaderboard();
     const interval = setInterval(loadLeaderboard, 30000);
     return () => clearInterval(interval);
-
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 2000);
   }, []);
 
   const handleRefresh = () => {
@@ -81,7 +77,7 @@ export default function Leaderboard() {
               <div className="flex items-center gap-2">
                 <span
                   className={`font-bold ${
-                    index < 3 ? "text-yellow-500" : "text-gray-600"
+                    index < 3 ? "text-orange-500" : "text-gray-600"
                   }`}
                 >
                   {index + 1}.
@@ -90,7 +86,7 @@ export default function Leaderboard() {
                   {entry.username}
                 </span>
               </div>
-              <span className="font-bold text-indigo-600">
+              <span className="font-bold text-orange-500">
                 {entry.score} {entry.score === 1 ? "point" : "points"}
               </span>
             </motion.div>
@@ -98,7 +94,7 @@ export default function Leaderboard() {
           <div className="mt-8 max-w-md mx-auto flex items-center justify-center">
             <button
               onClick={handleRefresh}
-              className="w-full text-center font-bold px-4 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-sm sm:text-base"
+              className="w-full text-center font-bold px-4 py-2 bg-black text-white rounded-lg shadow-md hover:bg-slate-500 transition-colors text-sm sm:text-base"
             >
               Refresh
             </button>

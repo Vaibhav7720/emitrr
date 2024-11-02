@@ -9,9 +9,7 @@ import { logout } from "./store/gameSlice";
 // import { saveGameState } from "./api/user";
 
 function App() {
-  const {
-    isLoggedIn: loggedIn,
-  } = useSelector((state) => state.game);
+  const { isLoggedIn: loggedIn } = useSelector((state) => state.game);
   const dispatch = useDispatch();
   const handleLogout = () => {
     // const gameState = {
@@ -58,7 +56,7 @@ function App() {
           <div className="mt-8 max-w-md mx-auto flex items-center justify-center">
             <button
               onClick={handleLogout}
-              className="w-full text-center font-bold px-4 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition-colors text-sm sm:text-base"
+              className="w-full text-center font-bold px-4 py-2 bg-black text-white rounded-lg shadow-md hover:bg-slate-500 transition-colors text-sm sm:text-base"
             >
               Logout
             </button>

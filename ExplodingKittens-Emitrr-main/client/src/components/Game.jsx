@@ -139,14 +139,7 @@ export default function Game() {
         gameStatus={gameStatus}
       />
 
-      {/* <div className="flex justify-center items-center gap-8">
-        {gameStatus === "playing" && deck.length > 0 && (
-          <Card isBack onClick={handleDrawCard} />
-        )}
-        {deck[0] && !["idle", "playing"].includes(gameStatus) && (
-          <Card type={gameStatus === "lost" ? "bomb" : "cat"} />
-        )}
-      </div> */}
+      {}
       <div className="flex justify-center flex-wrap gap-4">
         {gameStatus === "playing" &&
           deck.slice(0, 5).map((card, index) => (
@@ -164,7 +157,7 @@ export default function Game() {
         {gameStatus === "idle" && (
           <button
             onClick={handleStartGame}
-            className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition-colors"
+            className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-slate-500 transition-colors"
           >
             Start Game
           </button>
@@ -172,7 +165,7 @@ export default function Game() {
         {["won", "lost", "idle_after_won"].includes(gameStatus) && (
           <button
             onClick={handleResetGame}
-            className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition-colors"
+            className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-slate-500 transition-colors"
           >
             Play Again
           </button>
