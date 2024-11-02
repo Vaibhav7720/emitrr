@@ -1,5 +1,5 @@
 # Exploding Kitten
-![Exploding Kitten Game](./client/src/assets/kitten_photo.png)
+![Exploding Kitten Game](./client/src/assets/kitten_photo.jpg)
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
